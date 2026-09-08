@@ -30,10 +30,13 @@ jobs:
           python -m pip install -e . pytest
 
       - name: Run automated tests
-        run: pytest -q
+        run: pytest -q | tee results/pytest.txt
 
-      - name: Regenerate all tables, audit files, and figures
-        run: python scripts/reproduce_all.py
+      - name: Regenerate original experiments
+        run: python scripts/reproduce_all.py | tee results/reproduction_stdout.json
+
+      - name: Regenerate theorem, baseline, and prediction extensions
+        run: python scripts/reproduce_extensions.py | tee results/extension_stdout.json
 
       - name: Verify expected generated outputs
         run: |
@@ -45,6 +48,13 @@ jobs:
           test -f results/digits_mobius_accuracy.csv
           test -f results/digits_summary.json
           test -f results/THEOREM_AUDIT.md
+          test -f results/EXTENSION_AUDIT.md
+          test -f results/heldout_full_prediction.csv
+          test -f results/whole_envelope_separation_audit.csv
+          test -f results/controlled_agent_scalar_attribution.csv
+          test -f results/digits_scalar_attribution.csv
+          test -f results/controlled_agent_anova_sobol.csv
+          test -f results/digits_anova_sobol.csv
           test -f figures/agent_interactions.png
           test -f figures/agent_interactions.pdf
           test -f figures/digits_additive_residual.png
@@ -53,6 +63,10 @@ jobs:
           test -f figures/digits_interactions.pdf
           test -f figures/digits_resource_envelope.png
           test -f figures/digits_resource_envelope.pdf
+          test -f figures/heldout_prediction.png
+          test -f figures/heldout_prediction.pdf
+          test -f figures/whole_envelope_obdd_separation.png
+          test -f figures/whole_envelope_obdd_separation.pdf
 
       - name: Upload reproducibility artifact
         uses: actions/upload-artifact@v4
@@ -72,6 +86,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Generated results are already up to date."
           else
-            git commit -m "chore: regenerate GC-II results and figures [skip ci]"
+            git commit -m "chore: regenerate GC-II extended results and figures [skip ci]"
             git push origin HEAD:main
           fi

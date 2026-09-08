@@ -1,0 +1,75 @@
+name: Fixed-Model Language-System Factorial Experiment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/run_language_model_factorial.py'
+      - '.github/workflows/language_model.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  language-model-factorial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install language-model experiment dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install 'torch>=2.3,<3' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.44,<5' 'sentencepiece>=0.2' 'safetensors>=0.4'
+
+      - name: Run fixed-model 16-condition factorial experiment
+        env:
+          TOKENIZERS_PARALLELISM: 'false'
+          HF_HUB_DISABLE_TELEMETRY: '1'
+        run: python scripts/run_language_model_factorial.py | tee results/language_model_stdout.json
+
+      - name: Verify generated language-model outputs
+        run: |
+          test -f results/language_model_factorial_raw.csv
+          test -f results/language_model_factorial_summary.csv
+          test -f results/language_model_family_summary.csv
+          test -f results/language_model_mobius_accuracy.csv
+          test -f results/language_model_heldout_prediction.csv
+          test -f results/language_model_summary.json
+          test -f figures/language_model_interactions.png
+          test -f figures/language_model_interactions.pdf
+          test -f figures/language_model_family_heatmap.png
+          test -f figures/language_model_family_heatmap.pdf
+
+      - name: Upload language-model reproducibility artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcii-language-model-${{ github.sha }}
+          path: |
+            results/language_model_*
+            figures/language_model_*
+          if-no-files-found: error
+
+      - name: Commit generated language-model results to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/language_model_* figures/language_model_*
+          if git diff --cached --quiet; then
+            echo "Language-model results already up to date."
+          else
+            git commit -m "chore: add fixed-model language-system factorial results [skip ci]"
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,241 @@
+mask,channels,n_channels,task_id,family,correct,prediction,answer,input_tokens,output_tokens,seconds,num_beams,tool_calls,evidence_chars
+,∅,0,math01,mathematics,0,a styrofoam,102,17,12,0.19246182399999157,1,0,0
+,∅,0,math02,mathematics,1,144 divided by 12,12,16,7,0.11289719700000944,1,0,0
+,∅,0,math03,mathematics,0,35 plus 47,82,14,5,0.08120262600000672,1,0,0
+,∅,0,know01,knowledge,0,l'île de l'île,paris,15,11,0.1745593720000045,1,0,0
+,∅,0,know02,knowledge,0,saturn,mars,17,6,0.10098232299999665,1,0,0
+,∅,0,know03,knowledge,0,helium,carbon dioxide,20,5,0.08486727000000371,1,0,0
+,∅,0,reason01,reasoning,1,no,no,42,3,0.06070542999999873,1,0,0
+,∅,0,reason02,reasoning,1,yes,yes,34,3,0.05758167900000899,1,0,0
+,∅,0,reason03,reasoning,0,no,yes,36,3,0.0583911100000023,1,0,0
+,∅,0,tool01,tool-use,0,-29,437,19,5,0.08203692299998977,1,0,0
+,∅,0,tool02,tool-use,0,-49,513,16,5,0.08089346900000294,1,0,0
+,∅,0,tool03,tool-use,0,81,9,15,4,0.0667598330000061,1,0,0
+,∅,0,retr01,retrieval,0,256,7319,18,4,0.06739773399999649,1,0,0
+,∅,0,retr02,retrieval,0,san francisco,ranchi,21,8,0.12788898400000903,1,0,0
+,∅,0,retr03,retrieval,0,black,violet,19,3,0.06269840000000215,1,0,0
+R,R,1,math01,mathematics,0,17 multiplied,102,17,6,0.17085757899999976,4,0,0
+R,R,1,math02,mathematics,0,144,12,16,4,0.14161932599999716,4,0,0
+R,R,1,math03,mathematics,0,35 plus 47,82,14,5,0.15429213699999877,4,0,0
+R,R,1,know01,knowledge,0,france,paris,15,4,0.15119127600000581,4,0,0
+R,R,1,know02,knowledge,0,saturn,mars,17,6,0.17268823899999575,4,0,0
+R,R,1,know03,knowledge,0,helium,carbon dioxide,20,5,0.14892457499999523,4,0,0
+R,R,1,reason01,reasoning,1,no,no,42,3,0.09601428799999212,4,0,0
+R,R,1,reason02,reasoning,1,yes,yes,34,3,0.08964881400000024,4,0,0
+R,R,1,reason03,reasoning,0,no,yes,36,3,0.09025923299999761,4,0,0
+R,R,1,tool01,tool-use,0,0,437,19,4,0.11284052999999972,4,0,0
+R,R,1,tool02,tool-use,0,487,513,16,4,0.11074945600000774,4,0,0
+R,R,1,tool03,tool-use,0,81,9,15,4,0.11084512499999732,4,0,0
+R,R,1,retr01,retrieval,0,256,7319,18,4,0.13967768199999853,4,0,0
+R,R,1,retr02,retrieval,0,chicago,ranchi,21,5,0.14155963599999666,4,0,0
+R,R,1,retr03,retrieval,0,black,violet,19,3,0.11199726599998883,4,0,0
+I,I,1,math01,mathematics,0,a styrofoam,102,17,12,0.19152600700000733,1,0,0
+I,I,1,math02,mathematics,1,144 divided by 12,12,16,7,0.11332040599999971,1,0,0
+I,I,1,math03,mathematics,0,35 plus 47,82,14,5,0.08369471899999326,1,0,0
+I,I,1,know01,knowledge,1,Paris,paris,25,3,0.056822250999999824,1,0,37
+I,I,1,know02,knowledge,1,mars,mars,27,3,0.05629899299999863,1,0,39
+I,I,1,know03,knowledge,1,carbon dioxide,carbon dioxide,31,4,0.07348516800000482,1,0,51
+I,I,1,reason01,reasoning,1,no,no,42,3,0.05900276199999155,1,0,0
+I,I,1,reason02,reasoning,1,yes,yes,34,3,0.05592753000000528,1,0,0
+I,I,1,reason03,reasoning,0,no,yes,36,3,0.05613162200000943,1,0,0
+I,I,1,tool01,tool-use,0,-29,437,19,5,0.0831281809999922,1,0,0
+I,I,1,tool02,tool-use,0,-49,513,16,5,0.08193989199999407,1,0,0
+I,I,1,tool03,tool-use,0,81,9,15,4,0.06731148199999382,1,0,0
+I,I,1,retr01,retrieval,1,7319,7319,35,5,0.08944394200000261,1,0,63
+I,I,1,retr02,retrieval,0,rio de janeiro,ranchi,37,10,0.1635671910000127,1,0,50
+I,I,1,retr03,retrieval,1,violet,violet,33,3,0.05830935699999884,1,0,57
+A,A,1,math01,mathematics,0,a styrofoam,102,23,12,0.19151693999999964,1,1,0
+A,A,1,math02,mathematics,0,144,12,21,4,0.07107625099999382,1,1,0
+A,A,1,math03,mathematics,0,a minus,82,20,6,0.09825020200000267,1,1,0
+A,A,1,know01,knowledge,0,l'île de l'île,paris,15,11,0.1736621469999875,1,0,0
+A,A,1,know02,knowledge,0,saturn,mars,17,6,0.09827211299999306,1,0,0
+A,A,1,know03,knowledge,0,helium,carbon dioxide,20,5,0.08392594000000031,1,0,0
+A,A,1,reason01,reasoning,1,no,no,42,3,0.059577032999996504,1,0,0
+A,A,1,reason02,reasoning,1,yes,yes,34,3,0.0570668980000022,1,0,0
+A,A,1,reason03,reasoning,0,no,yes,36,3,0.05706333999999913,1,0,0
+A,A,1,tool01,tool-use,0,-29,437,25,5,0.08379455400000779,1,1,0
+A,A,1,tool02,tool-use,0,-49,513,22,5,0.08364430400000344,1,1,0
+A,A,1,tool03,tool-use,0,81,9,20,4,0.06858955900000296,1,1,0
+A,A,1,retr01,retrieval,0,256,7319,18,4,0.07057766000001209,1,0,0
+A,A,1,retr02,retrieval,0,san francisco,ranchi,21,8,0.13408719500000643,1,0,0
+A,A,1,retr03,retrieval,0,black,violet,19,3,0.05275092000000825,1,0,0
+L,L,1,math01,mathematics,0,a styrofoam,102,36,12,0.19592359700000372,1,0,0
+L,L,1,math02,mathematics,0,144,12,35,4,0.07501814500000137,1,0,0
+L,L,1,math03,mathematics,0,a sex test,82,33,8,0.1328246460000031,1,0,0
+L,L,1,know01,knowledge,0,l'ondre,paris,34,8,0.134807109999997,1,0,0
+L,L,1,know02,knowledge,0,venus,mars,36,4,0.07384911100000124,1,0,0
+L,L,1,know03,knowledge,0,helium,carbon dioxide,39,5,0.09170758300000159,1,0,0
+L,L,1,reason01,reasoning,1,no,no,61,3,0.06768683999999325,1,0,0
+L,L,1,reason02,reasoning,1,yes,yes,53,3,0.06410002900000222,1,0,0
+L,L,1,reason03,reasoning,1,yes,yes,55,3,0.06463802300000054,1,0,0
+L,L,1,tool01,tool-use,0,-29,437,38,5,0.08772762799999612,1,0,0
+L,L,1,tool02,tool-use,0,-29,513,35,5,0.08908708799999943,1,0,0
+L,L,1,tool03,tool-use,0,81,9,34,4,0.07363455099999783,1,0,0
+L,L,1,retr01,retrieval,0,999,7319,37,4,0.07550499500000285,1,0,0
+L,L,1,retr02,retrieval,0,san francisco,ranchi,40,8,0.13741368000000875,1,0,0
+L,L,1,retr03,retrieval,0,black,violet,38,3,0.05883032399999877,1,0,0
+IR,RI,2,math01,mathematics,0,17 multiplied,102,17,6,0.17196511699999917,4,0,0
+IR,RI,2,math02,mathematics,0,144,12,16,4,0.14424018299999375,4,0,0
+IR,RI,2,math03,mathematics,0,35 plus 47,82,14,5,0.1468300169999992,4,0,0
+IR,RI,2,know01,knowledge,1,Paris,paris,25,3,0.11571262200000376,4,0,37
+IR,RI,2,know02,knowledge,1,mars,mars,27,3,0.11683033099998852,4,0,39
+IR,RI,2,know03,knowledge,1,carbon dioxide,carbon dioxide,31,4,0.11756859000000475,4,0,51
+IR,RI,2,reason01,reasoning,1,no,no,42,3,0.09299359300000276,4,0,0
+IR,RI,2,reason02,reasoning,1,yes,yes,34,3,0.09730906900000491,4,0,0
+IR,RI,2,reason03,reasoning,0,no,yes,36,3,0.08953162299999917,4,0,0
+IR,RI,2,tool01,tool-use,0,0,437,19,4,0.11275980299998878,4,0,0
+IR,RI,2,tool02,tool-use,0,487,513,16,4,0.11395360399998822,4,0,0
+IR,RI,2,tool03,tool-use,0,81,9,15,4,0.11607881599999814,4,0,0
+IR,RI,2,retr01,retrieval,1,7319,7319,35,5,0.15175921799999514,4,0,63
+IR,RI,2,retr02,retrieval,1,Ranchi,ranchi,37,4,0.1807579230000016,4,0,50
+IR,RI,2,retr03,retrieval,1,violet,violet,33,3,0.08983118199999751,4,0,57
+AR,RA,2,math01,mathematics,0,0,102,23,4,0.11404545599999949,4,1,0
+AR,RA,2,math02,mathematics,0,144,12,21,4,0.11400227500000426,4,1,0
+AR,RA,2,math03,mathematics,0,62,82,20,4,0.11406891999999402,4,1,0
+AR,RA,2,know01,knowledge,0,france,paris,15,4,0.14383154200000092,4,0,0
+AR,RA,2,know02,knowledge,0,saturn,mars,17,6,0.17387983899999426,4,0,0
+AR,RA,2,know03,knowledge,0,helium,carbon dioxide,20,5,0.14276012000000549,4,0,0
+AR,RA,2,reason01,reasoning,1,no,no,42,3,0.0926066789999993,4,0,0
+AR,RA,2,reason02,reasoning,1,yes,yes,34,3,0.0882442970000028,4,0,0
+AR,RA,2,reason03,reasoning,0,no,yes,36,3,0.08870511800000713,4,0,0
+AR,RA,2,tool01,tool-use,0,-29,437,25,5,0.14645415400001127,4,1,0
+AR,RA,2,tool02,tool-use,0,98,513,22,4,0.11353075400000989,4,1,0
+AR,RA,2,tool03,tool-use,0,81,9,20,4,0.11263410800000884,4,1,0
+AR,RA,2,retr01,retrieval,0,256,7319,18,4,0.14483289399998966,4,0,0
+AR,RA,2,retr02,retrieval,0,chicago,ranchi,21,5,0.14219399200000282,4,0,0
+AR,RA,2,retr03,retrieval,0,black,violet,19,3,0.11168406299999845,4,0,0
+LR,RL,2,math01,mathematics,0,0,102,36,4,0.11828776400000152,4,0,0
+LR,RL,2,math02,mathematics,0,144,12,35,4,0.11965865599999859,4,0,0
+LR,RL,2,math03,mathematics,0,35 plus 47,82,33,5,0.14800957999999298,4,0,0
+LR,RL,2,know01,knowledge,0,london,paris,34,6,0.17854507699999544,4,0,0
+LR,RL,2,know02,knowledge,0,neptune,mars,36,6,0.17936839600000098,4,0,0
+LR,RL,2,know03,knowledge,0,helium,carbon dioxide,39,5,0.14846722599999396,4,0,0
+LR,RL,2,reason01,reasoning,1,no,no,61,3,0.10057469000000197,4,0,0
+LR,RL,2,reason02,reasoning,1,yes,yes,53,3,0.09693401699999526,4,0,0
+LR,RL,2,reason03,reasoning,1,yes,yes,55,3,0.09862275300000078,4,0,0
+LR,RL,2,tool01,tool-use,0,0,437,38,4,0.11995469000000014,4,0,0
+LR,RL,2,tool02,tool-use,0,487,513,35,4,0.1183479769999991,4,0,0
+LR,RL,2,tool03,tool-use,0,81,9,34,4,0.1205975410000093,4,0,0
+LR,RL,2,retr01,retrieval,0,999,7319,37,4,0.12336596399998712,4,0,0
+LR,RL,2,retr02,retrieval,0,New York City,ranchi,40,5,0.1498882220000013,4,0,0
+LR,RL,2,retr03,retrieval,0,black,violet,38,3,0.11868817300000956,4,0,0
+AI,IA,2,math01,mathematics,0,a styrofoam,102,23,12,0.19228571599998645,1,1,0
+AI,IA,2,math02,mathematics,0,144,12,21,4,0.06922660499999722,1,1,0
+AI,IA,2,math03,mathematics,0,a minus,82,20,6,0.09782457100000386,1,1,0
+AI,IA,2,know01,knowledge,1,Paris,paris,25,3,0.05835680100000218,1,0,37
+AI,IA,2,know02,knowledge,1,mars,mars,27,3,0.06229932000000815,1,0,39
+AI,IA,2,know03,knowledge,1,carbon dioxide,carbon dioxide,31,4,0.0749628749999971,1,0,51
+AI,IA,2,reason01,reasoning,1,no,no,42,3,0.06051963299999841,1,0,0
+AI,IA,2,reason02,reasoning,1,yes,yes,34,3,0.06000008200000195,1,0,0
+AI,IA,2,reason03,reasoning,0,no,yes,36,3,0.0576812290000106,1,0,0
+AI,IA,2,tool01,tool-use,0,-29,437,25,5,0.08589289300000758,1,1,0
+AI,IA,2,tool02,tool-use,0,-49,513,22,5,0.0830839420000018,1,1,0
+AI,IA,2,tool03,tool-use,0,81,9,20,4,0.06709958099999369,1,1,0
+AI,IA,2,retr01,retrieval,1,7319,7319,35,5,0.08860253599999623,1,0,63
+AI,IA,2,retr02,retrieval,0,rio de janeiro,ranchi,37,10,0.16489319400000113,1,0,50
+AI,IA,2,retr03,retrieval,1,violet,violet,33,3,0.05787220599999898,1,0,57
+IL,IL,2,math01,mathematics,0,a styrofoam,102,36,12,0.19360447200000408,1,0,0
+IL,IL,2,math02,mathematics,0,144,12,35,4,0.07667713900001161,1,0,0
+IL,IL,2,math03,mathematics,0,a sex test,82,33,8,0.1355455059999997,1,0,0
+IL,IL,2,know01,knowledge,1,Paris,paris,44,3,0.06229696500000159,1,0,37
+IL,IL,2,know02,knowledge,1,Mars,mars,46,3,0.06089833100000419,1,0,39
+IL,IL,2,know03,knowledge,1,carbon dioxide,carbon dioxide,50,4,0.07636915399999111,1,0,51
+IL,IL,2,reason01,reasoning,1,no,no,61,3,0.06437543900000264,1,0,0
+IL,IL,2,reason02,reasoning,1,yes,yes,53,3,0.06253305599999237,1,0,0
+IL,IL,2,reason03,reasoning,1,yes,yes,55,3,0.06420861800000921,1,0,0
+IL,IL,2,tool01,tool-use,0,-29,437,38,5,0.0901033410000025,1,0,0
+IL,IL,2,tool02,tool-use,0,-29,513,35,5,0.08839527899999666,1,0,0
+IL,IL,2,tool03,tool-use,0,81,9,34,4,0.07244847600000526,1,0,0
+IL,IL,2,retr01,retrieval,1,7319,7319,54,5,0.09415107600000283,1,0,63
+IL,IL,2,retr02,retrieval,1,Ranchi,ranchi,56,4,0.07922929899999076,1,0,50
+IL,IL,2,retr03,retrieval,1,violet,violet,52,3,0.06256503499999155,1,0,57
+AL,AL,2,math01,mathematics,0,a styrofoam,102,42,12,0.19910317800000144,1,1,0
+AL,AL,2,math02,mathematics,0,144,12,40,4,0.07521177200000295,1,1,0
+AL,AL,2,math03,mathematics,0,a minus,82,39,6,0.10438290700000152,1,1,0
+AL,AL,2,know01,knowledge,0,l'ondre,paris,34,8,0.1342429299999992,1,0,0
+AL,AL,2,know02,knowledge,0,venus,mars,36,4,0.07290989999999908,1,0,0
+AL,AL,2,know03,knowledge,0,helium,carbon dioxide,39,5,0.09021292099998846,1,0,0
+AL,AL,2,reason01,reasoning,1,no,no,61,3,0.06776105000000143,1,0,0
+AL,AL,2,reason02,reasoning,1,yes,yes,53,3,0.06341117200000213,1,0,0
+AL,AL,2,reason03,reasoning,1,yes,yes,55,3,0.06417510899999002,1,0,0
+AL,AL,2,tool01,tool-use,0,-29,437,44,5,0.09119442400000821,1,1,0
+AL,AL,2,tool02,tool-use,0,-29,513,41,5,0.09184582200001046,1,1,0
+AL,AL,2,tool03,tool-use,0,81,9,39,4,0.07731608299999948,1,1,0
+AL,AL,2,retr01,retrieval,0,999,7319,37,4,0.07672264400000017,1,0,0
+AL,AL,2,retr02,retrieval,0,san francisco,ranchi,40,8,0.13423069700000667,1,0,0
+AL,AL,2,retr03,retrieval,0,black,violet,38,3,0.05798943099999576,1,0,0
+AIR,RIA,3,math01,mathematics,0,0,102,23,4,0.11339761099999635,4,1,0
+AIR,RIA,3,math02,mathematics,0,144,12,21,4,0.115070596999999,4,1,0
+AIR,RIA,3,math03,mathematics,0,62,82,20,4,0.11158007500000622,4,1,0
+AIR,RIA,3,know01,knowledge,1,Paris,paris,25,3,0.11560384300000237,4,0,37
+AIR,RIA,3,know02,knowledge,1,mars,mars,27,3,0.11554196699999864,4,0,39
+AIR,RIA,3,know03,knowledge,1,carbon dioxide,carbon dioxide,31,4,0.11796623700000453,4,0,51
+AIR,RIA,3,reason01,reasoning,1,no,no,42,3,0.09438495599999897,4,0,0
+AIR,RIA,3,reason02,reasoning,1,yes,yes,34,3,0.08971677400000999,4,0,0
+AIR,RIA,3,reason03,reasoning,0,no,yes,36,3,0.09011234300000126,4,0,0
+AIR,RIA,3,tool01,tool-use,0,-29,437,25,5,0.14760348400000112,4,1,0
+AIR,RIA,3,tool02,tool-use,0,98,513,22,4,0.11521911500000215,4,1,0
+AIR,RIA,3,tool03,tool-use,0,81,9,20,4,0.111891717000006,4,1,0
+AIR,RIA,3,retr01,retrieval,1,7319,7319,35,5,0.147522151000004,4,0,63
+AIR,RIA,3,retr02,retrieval,1,Ranchi,ranchi,37,4,0.1854420039999951,4,0,50
+AIR,RIA,3,retr03,retrieval,1,violet,violet,33,3,0.09100257599999395,4,0,57
+ILR,RIL,3,math01,mathematics,0,0,102,36,4,0.11830860700000301,4,0,0
+ILR,RIL,3,math02,mathematics,0,144,12,35,4,0.11698325999999781,4,0,0
+ILR,RIL,3,math03,mathematics,0,35 plus 47,82,33,5,0.1480444369999958,4,0,0
+ILR,RIL,3,know01,knowledge,1,Paris,paris,44,3,0.12176969399999393,4,0,37
+ILR,RIL,3,know02,knowledge,1,Mars,mars,46,3,0.12199512499999798,4,0,39
+ILR,RIL,3,know03,knowledge,1,carbon dioxide,carbon dioxide,50,4,0.12674114300000383,4,0,51
+ILR,RIL,3,reason01,reasoning,1,no,no,61,3,0.10158960799999761,4,0,0
+ILR,RIL,3,reason02,reasoning,1,yes,yes,53,3,0.09746217500000398,4,0,0
+ILR,RIL,3,reason03,reasoning,1,yes,yes,55,3,0.09791735700000004,4,0,0
+ILR,RIL,3,tool01,tool-use,0,0,437,38,4,0.11722806800000285,4,0,0
+ILR,RIL,3,tool02,tool-use,0,487,513,35,4,0.11775972099999876,4,0,0
+ILR,RIL,3,tool03,tool-use,0,81,9,34,4,0.11667546500000014,4,0,0
+ILR,RIL,3,retr01,retrieval,1,7319,7319,54,5,0.15606276900000182,4,0,63
+ILR,RIL,3,retr02,retrieval,1,Ranchi,ranchi,56,4,0.1564956179999939,4,0,50
+ILR,RIL,3,retr03,retrieval,1,violet,violet,52,3,0.09823867599999403,4,0,57
+ALR,RAL,3,math01,mathematics,0,0,102,42,4,0.12407856699999797,4,1,0
+ALR,RAL,3,math02,mathematics,0,144,12,40,4,0.12707340400000078,4,1,0
+ALR,RAL,3,math03,mathematics,0,66,82,39,4,0.140460456999989,4,1,0
+ALR,RAL,3,know01,knowledge,0,london,paris,34,6,0.17958475000000362,4,0,0
+ALR,RAL,3,know02,knowledge,0,neptune,mars,36,6,0.17931112799999482,4,0,0
+ALR,RAL,3,know03,knowledge,0,helium,carbon dioxide,39,5,0.15048939599999756,4,0,0
+ALR,RAL,3,reason01,reasoning,1,no,no,61,3,0.10181689300000585,4,0,0
+ALR,RAL,3,reason02,reasoning,1,yes,yes,53,3,0.09728094700000156,4,0,0
+ALR,RAL,3,reason03,reasoning,1,yes,yes,55,3,0.09944106300000044,4,0,0
+ALR,RAL,3,tool01,tool-use,0,59,437,44,4,0.12168826200000638,4,1,0
+ALR,RAL,3,tool02,tool-use,0,59,513,41,4,0.12048090599999739,4,1,0
+ALR,RAL,3,tool03,tool-use,0,81,9,39,4,0.1201852930000058,4,1,0
+ALR,RAL,3,retr01,retrieval,0,999,7319,37,4,0.12062522600000136,4,0,0
+ALR,RAL,3,retr02,retrieval,0,New York City,ranchi,40,5,0.15192208199999868,4,0,0
+ALR,RAL,3,retr03,retrieval,0,black,violet,38,3,0.12265502799999695,4,0,0
+AIL,IAL,3,math01,mathematics,0,a styrofoam,102,42,12,0.20170119399999464,1,1,0
+AIL,IAL,3,math02,mathematics,0,144,12,40,4,0.07816426799999476,1,1,0
+AIL,IAL,3,math03,mathematics,0,a minus,82,39,6,0.10738150000000246,1,1,0
+AIL,IAL,3,know01,knowledge,1,Paris,paris,44,3,0.06130127999999502,1,0,37
+AIL,IAL,3,know02,knowledge,1,Mars,mars,46,3,0.06094494399999917,1,0,39
+AIL,IAL,3,know03,knowledge,1,carbon dioxide,carbon dioxide,50,4,0.07605769199999202,1,0,51
+AIL,IAL,3,reason01,reasoning,1,no,no,61,3,0.06639055000000837,1,0,0
+AIL,IAL,3,reason02,reasoning,1,yes,yes,53,3,0.06317478000001131,1,0,0
+AIL,IAL,3,reason03,reasoning,1,yes,yes,55,3,0.06465923499999349,1,0,0
+AIL,IAL,3,tool01,tool-use,0,-29,437,44,5,0.09114046400000575,1,1,0
+AIL,IAL,3,tool02,tool-use,0,-29,513,41,5,0.09201063000000431,1,1,0
+AIL,IAL,3,tool03,tool-use,0,81,9,39,4,0.07715027400000452,1,1,0
+AIL,IAL,3,retr01,retrieval,1,7319,7319,54,5,0.09678921799999785,1,0,63
+AIL,IAL,3,retr02,retrieval,1,Ranchi,ranchi,56,4,0.08113882600000011,1,0,50
+AIL,IAL,3,retr03,retrieval,1,violet,violet,52,3,0.06155843999999888,1,0,57
+AILR,RIAL,4,math01,mathematics,0,0,102,42,4,0.11996670599999959,4,1,0
+AILR,RIAL,4,math02,mathematics,0,144,12,40,4,0.12033007499999826,4,1,0
+AILR,RIAL,4,math03,mathematics,0,66,82,39,4,0.1226781619999997,4,1,0
+AILR,RIAL,4,know01,knowledge,1,Paris,paris,44,3,0.12283595599998876,4,0,37
+AILR,RIAL,4,know02,knowledge,1,Mars,mars,46,3,0.12417114099999083,4,0,39
+AILR,RIAL,4,know03,knowledge,1,carbon dioxide,carbon dioxide,50,4,0.12565704700000424,4,0,51
+AILR,RIAL,4,reason01,reasoning,1,no,no,61,3,0.10159983100000147,4,0,0
+AILR,RIAL,4,reason02,reasoning,1,yes,yes,53,3,0.09935598899998865,4,0,0
+AILR,RIAL,4,reason03,reasoning,1,yes,yes,55,3,0.09926238399999932,4,0,0
+AILR,RIAL,4,tool01,tool-use,0,59,437,44,4,0.12242686199999753,4,1,0
+AILR,RIAL,4,tool02,tool-use,0,59,513,41,4,0.12331497199998864,4,1,0
+AILR,RIAL,4,tool03,tool-use,0,81,9,39,4,0.12168401499999959,4,1,0
+AILR,RIAL,4,retr01,retrieval,1,7319,7319,54,5,0.16022820700000295,4,0,63
+AILR,RIAL,4,retr02,retrieval,1,Ranchi,ranchi,56,4,0.16007274700000096,4,0,50
+AILR,RIAL,4,retr03,retrieval,1,violet,violet,52,3,0.09819652299999859,4,0,57

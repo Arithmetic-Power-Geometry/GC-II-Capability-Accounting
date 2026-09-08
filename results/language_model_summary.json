@@ -1,0 +1,36 @@
+{
+  "model_id": "google/flan-t5-small",
+  "tasks": 15,
+  "configurations": 16,
+  "evaluations": 240,
+  "baseline_accuracy": 0.2,
+  "full_accuracy": 0.6,
+  "max_reconstruction_error": 2.220446049250313e-16,
+  "higher_order_abs_mass": 0.46666666666666695,
+  "shapley": {
+    "R": -0.011111111111111117,
+    "I": 0.37777777777777777,
+    "A": -0.022222222222222223,
+    "L": 0.055555555555555546
+  },
+  "heldout_prediction": [
+    {
+      "max_order": 1,
+      "prediction": 0.39999999999999997,
+      "observed": 0.6,
+      "absolute_error": 0.2
+    },
+    {
+      "max_order": 2,
+      "prediction": 0.7333333333333333,
+      "observed": 0.6,
+      "absolute_error": 0.1333333333333333
+    },
+    {
+      "max_order": 3,
+      "prediction": 0.5999999999999996,
+      "observed": 0.6,
+      "absolute_error": 3.3306690738754696e-16
+    }
+  ]
+}

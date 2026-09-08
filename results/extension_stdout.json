@@ -45,9 +45,9 @@
     {
       "benchmark": "digits",
       "method": "third_order_truncated",
-      "prediction": 0.9942766295707471,
+      "prediction": 0.9942766295707469,
       "observed": 0.978060413354531,
-      "absolute_error": 0.01621621621621616
+      "absolute_error": 0.01621621621621594
     },
     {
       "benchmark": "digits",

@@ -14,9 +14,9 @@
     -0.11732909379968207,
     -0.04165341812400649
   ],
-  "mobius_reconstruction": 0.9780604133545313,
-  "max_reconstruction_error": 3.3306690738754696e-16,
-  "higher_order_abs_mass": 0.1704292527821929,
+  "mobius_reconstruction": 0.9780604133545308,
+  "max_reconstruction_error": 2.220446049250313e-16,
+  "higher_order_abs_mass": 0.17042925278219345,
   "singleton_abs_mass": 0.17774244833068342,
   "pareto_systems": [
     "\u2205",

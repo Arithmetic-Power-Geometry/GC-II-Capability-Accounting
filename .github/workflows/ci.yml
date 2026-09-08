@@ -1,20 +1,77 @@
-name: CI
-on: [push, pull_request, workflow_dispatch]
+name: CI and Reproducibility
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   test-and-reproduce:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e . pytest
-      - run: pytest -q
-      - run: python scripts/reproduce_all.py
-      - uses: actions/upload-artifact@v4
+          cache: 'pip'
+
+      - name: Install package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e . pytest
+
+      - name: Run automated tests
+        run: pytest -q
+
+      - name: Regenerate all tables, audit files, and figures
+        run: python scripts/reproduce_all.py
+
+      - name: Verify expected generated outputs
+        run: |
+          test -f results/agent_factorial.csv
+          test -f results/agent_mobius.csv
+          test -f results/agent_summary.json
+          test -f results/digits_factorial_raw.csv
+          test -f results/digits_factorial_summary.csv
+          test -f results/digits_mobius_accuracy.csv
+          test -f results/digits_summary.json
+          test -f results/THEOREM_AUDIT.md
+          test -f figures/agent_interactions.png
+          test -f figures/agent_interactions.pdf
+          test -f figures/digits_additive_residual.png
+          test -f figures/digits_additive_residual.pdf
+          test -f figures/digits_interactions.png
+          test -f figures/digits_interactions.pdf
+          test -f figures/digits_resource_envelope.png
+          test -f figures/digits_resource_envelope.pdf
+
+      - name: Upload reproducibility artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: gcii-results
+          name: gcii-results-${{ github.sha }}
           path: |
             results/
             figures/
+          if-no-files-found: error
+
+      - name: Commit regenerated results and figures to main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results figures
+          if git diff --cached --quiet; then
+            echo "Generated results are already up to date."
+          else
+            git commit -m "chore: regenerate GC-II results and figures [skip ci]"
+            git push origin HEAD:main
+          fi

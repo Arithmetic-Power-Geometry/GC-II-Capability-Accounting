@@ -71,5 +71,7 @@ jobs:
             echo "Language-model results already up to date."
           else
             git commit -m "chore: add fixed-model language-system factorial results [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi

@@ -1,0 +1,23 @@
+{
+  "agent": {
+    "full_accuracy": 1.0,
+    "additive_prediction": 0.3125,
+    "additive_residual": 0.6875,
+    "mobius_reconstruction": 1.0,
+    "max_reconstruction_error": 0.0,
+    "interaction_order_mass": {"0":0.0625,"1":0.25,"2":0.375,"3":0.25,"4":0.0625}
+  },
+  "digits": {
+    "full_accuracy_mean": 0.978060413354531,
+    "baseline_accuracy_mean": 0.8798092209856916,
+    "additive_prediction": 1.057551669316375,
+    "additive_residual": -0.07949125596184392,
+    "additive_residual_bootstrap95": [-0.11732909379968207,-0.04165341812400649],
+    "mobius_reconstruction": 0.9780604133545309,
+    "max_reconstruction_error": 1.1102230246251565e-16,
+    "higher_order_abs_mass": 0.17042925278219334,
+    "singleton_abs_mass": 0.17774244833068342
+  }
+}
+.......                                                                  [100%]
+7 passed in 0.04s

@@ -1,0 +1,14 @@
+{
+  "full_accuracy": 1.0,
+  "additive_prediction": 0.3125,
+  "additive_residual": 0.6875,
+  "mobius_reconstruction": 1.0,
+  "max_reconstruction_error": 0.0,
+  "interaction_order_mass": {
+    "0": 0.0625,
+    "1": 0.25,
+    "2": 0.375,
+    "3": 0.25,
+    "4": 0.0625
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "full_accuracy_mean": 0.978060413354531,
+  "baseline_accuracy_mean": 0.8798092209856916,
+  "additive_prediction": 1.057551669316375,
+  "additive_residual": -0.07949125596184392,
+  "seedwise_additive_residuals": [
+    -0.03497615262321163,
+    -0.13990461049284564,
+    -0.025437201907790308,
+    -0.08744038155802858,
+    -0.10969793322734522
+  ],
+  "additive_residual_bootstrap95": [
+    -0.11732909379968207,
+    -0.04165341812400649
+  ],
+  "mobius_reconstruction": 0.9780604133545313,
+  "max_reconstruction_error": 3.3306690738754696e-16,
+  "higher_order_abs_mass": 0.1704292527821929,
+  "singleton_abs_mass": 0.17774244833068342,
+  "pareto_systems": ["∅","A","I","L","IA","AL","IL","RI","IAL","RIA","RIL","RIAL"]
+}
